@@ -46,9 +46,7 @@ function onValue (changedSnapshot) {
 }
 
 function parseAction (words) {
-  console.log('before normalize = ', words);
-  words = words.filter((word) => !word.match(/^て$|^に$|^を$|^は$/));
-  console.log('after normalize = ', words);
+  words = words.filter((word) => !word.match(/^に$|^を$/));
 
   const ope = words.shift();
   if (ope.match(/起動|軌道|つけ|オン/)) {
